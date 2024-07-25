@@ -14,8 +14,7 @@ connectDb();
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors(
-));
+app.use(cors());
 
 // Routes
 app.use("/api/v1/user", UserRoutes);
