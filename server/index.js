@@ -14,7 +14,13 @@ connectDb();
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
-app.use(cors());
+app.use(cors(
+    {
+        origin : ["https://mern-blog-refined-frontend.vercel.app/"],
+        methods : ["POST" , "GET"],
+        credentials : true
+    }
+));
 
 // Routes
 app.use("/api/v1/user", UserRoutes);
