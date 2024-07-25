@@ -8,7 +8,7 @@ export default defineConfig({
   server : {
        proxy : {
         '/api':{
-          target : "https://mern-blog-refined.vercel.app/" ,
+          target : "http://localhost:3000" ,
                 secure : false
         }
        }
